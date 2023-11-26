@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-area {
+            width: 45%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        #originalText {
+            height: 300px; /* Set a fixed height or adjust as needed */
+        }
+
+        #summarizedText {
+            height: 300px; /* Set a fixed height or adjust as needed */
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .word-count {
+            text-align: center;
+            margin-top: 10px;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Text Summarization App</h1>
+
+    <div class="container">
+        <div class="text-area">
+            <label for="originalText">Original Text:</label>
+            <textarea id="originalText" readonly>{{doc}}</textarea>
+            <div class="word-count">Word Count: {{len_org}}</div>
+        </div>
+
+        <div class="text-area">
+            <label for="summarizedText">Summarized Text:</label>
+            <textarea id="summarizedText" readonly>{{summary}}</textarea>
+            <div class="word-count">Word Count: {{len_summ}}</div>
+        </div>
+    </div>
+
+</body>
+</html>
